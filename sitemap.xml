@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Adresse publique provisoire : https://catialin-creator.github.io/catialin-aurelie_reiki/
+  Lors du passage au nom de domaine (changement add-nom-de-domaine), remplacer cette adresse dans :
+    - sitemap.xml (ce fichier, 2 URL)
+    - robots.txt (ligne Sitemap)
+    - index.html (canonical, og:url, og:image, JSON-LD url et image)
+    - mentions-legales.html (canonical)
+  et remplacer <base href="/catialin-aurelie_reiki/"> par <base href="/"> dans 404.html.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://catialin-creator.github.io/catialin-aurelie_reiki/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://catialin-creator.github.io/catialin-aurelie_reiki/mentions-legales.html</loc>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.3</priority>
+  </url>
+</urlset>

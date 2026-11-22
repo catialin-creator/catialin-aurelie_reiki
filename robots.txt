@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://catialin-creator.github.io/catialin-aurelie_reiki/sitemap.xml
