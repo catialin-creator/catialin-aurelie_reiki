@@ -6,20 +6,16 @@ Définit comment le visiteur se déplace dans le site et passe à l'action : men
 
 ## Requirements
 
-### Requirement: Boutons d'action de l'en-tête
-L'en-tête SHALL proposer deux boutons : « Me contacter », qui mène à la section `#contact`, et « Appeler le 07 69 52 76 58 », qui ouvre un lien `tel:+33769527658`.
+### Requirement: Bouton « Me contacter » de l'en-tête
+L'en-tête SHALL proposer un unique bouton d'action, « Me contacter », qui mène à la section `#contact`.
 
-#### Scenario: Boutons visibles sans défiler sur mobile
+#### Scenario: Bouton visible sans défiler sur mobile
 - **WHEN** la page est ouverte sur un écran de 390 × 844 px
-- **THEN** les deux boutons sont entièrement visibles sans faire défiler la page
+- **THEN** le bouton « Me contacter » est entièrement visible sans faire défiler la page
 
 #### Scenario: Me contacter
 - **WHEN** le visiteur active « Me contacter »
 - **THEN** la page défile jusqu'à la section contact et son titre est visible
-
-#### Scenario: Appeler
-- **WHEN** le visiteur active « Appeler » sur un mobile
-- **THEN** l'application Téléphone s'ouvre avec le 07 69 52 76 58
 
 ### Requirement: Menu d'ancres
 La page SHALL afficher en haut un menu de navigation (élément `nav` avec un nom accessible) contenant trois liens : « Reiki » vers `#reiki`, « Séance » vers `#seance`, « Contact » vers `#contact`. Le menu SHALL fonctionner sans JavaScript.
