@@ -10,12 +10,12 @@
 <link rel="preload" href="assets/fonts/jost-300.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/cormorant-garamond-400-italic.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/main.js" defer></script>
 </head>
 <body>
 
-<header class="hero" id="haut">
+<header class="hero">
   <nav class="wrap topnav" aria-label="Navigation principale">
-    <a class="brand" href="#haut">Aurélie Irigoyen</a>
     <ul class="menu">
       <li><a href="#reiki">Reiki</a></li>
       <li><a href="#seance">Séance</a></li>
@@ -29,7 +29,6 @@
       <p class="lede">Par l'apposition de mes mains, venez découvrir et profiter de ce soin énergétique qu'est le Reiki. Un doux moment de bien-être et de partage, à Anglet.</p>
       <div class="btns">
         <a class="btn btn-gold" href="#contact">Me contacter</a>
-        <a class="btn btn-ghost" href="tel:+33769527658">Appeler le 07 69 52 76 58</a>
       </div>
     </div>
     <div class="art" aria-hidden="true">
@@ -142,10 +141,69 @@
   <div class="wrap">
     <h2>Me contacter</h2>
     <p class="soft narrow">Pour une question, une première séance ou un rendez-vous, appelez-moi ou écrivez-moi.</p>
-    <div class="contact-grid">
-      <a href="tel:+33769527658"><span class="k">Téléphone</span><span class="v">07 69 52 76 58</span></a>
-      <a href="mailto:aurelie.reiki@hotmail.com"><span class="k">E-mail</span><span class="v">aurelie.reiki@hotmail.com</span></a>
-      <a href="https://www.google.com/maps/search/?api=1&amp;query=8+rue+Hondritz+de+Bas+64600+Anglet" target="_blank" rel="noopener"><span class="k">Adresse <span class="visually-hidden">(itinéraire, nouvel onglet)</span></span><span class="v">8, rue Hondritz de Bas<br>64600 Anglet</span></a>
+    <div class="contact-layout">
+      <div class="contact-grid">
+        <a href="tel:+33769527658"><span class="k">Téléphone</span><span class="v">07 69 52 76 58</span></a>
+        <a href="sms:+33769527658"><span class="k">SMS</span><span class="v">Envoyer un SMS</span></a>
+        <a href="mailto:aurelie.reiki@hotmail.com"><span class="k">E-mail</span><span class="v">aurelie.reiki@hotmail.com</span></a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=8+rue+Hondritz+de+Bas+64600+Anglet" target="_blank" rel="noopener"><span class="k">Adresse <span class="visually-hidden">(itinéraire, nouvel onglet)</span></span><span class="v">8, rue Hondritz de Bas<br>64600 Anglet</span></a>
+        <div class="social-block">
+          <span class="k">Suivez-moi</span>
+          <!-- Réseaux sociaux : remplacer A_COMPLETER par les adresses des pages d'Aurélie (ici et dans le pied de page) -->
+          <ul class="social">
+            <li><a href="https://www.facebook.com/A_COMPLETER" target="_blank" rel="noopener"><svg viewBox="3 3 18 18" aria-hidden="true" focusable="false"><path d="M14.5 8.5H16V5.6c-.3 0-1.2-.1-2.3-.1-2.3 0-3.7 1.4-3.7 3.9v2.1H7.6v3.2H10V21h3.1v-6.3h2.5l.4-3.2h-2.9V9.7c0-.9.3-1.2 1.4-1.2z"/></svg><span class="visually-hidden">Facebook (nouvel onglet)</span></a></li>
+            <li><a href="https://www.instagram.com/A_COMPLETER" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3.9" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.1" cy="6.9" r="1.1"/></svg><span class="visually-hidden">Instagram (nouvel onglet)</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <h3 class="form-title">Écrivez-moi</h3>
+        <p class="form-hint soft">Une question, une demande de rendez-vous ? Je vous réponds au plus vite.</p>
+
+        <!-- Clé Web3Forms : remplacer A_REMPLACER par la clé reçue pour aurelie.reiki@hotmail.com -->
+        <input type="hidden" name="access_key" value="A_REMPLACER">
+        <input type="hidden" name="from_name" value="Site Reiki Aurélie Irigoyen">
+        <input type="hidden" name="subject" value="Nouveau message – site Reiki">
+
+        <div class="hp" aria-hidden="true">
+          <label for="botcheck">Ne pas remplir</label>
+          <input type="checkbox" name="botcheck" id="botcheck" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="f-nom">Nom <span class="req">(obligatoire)</span></label>
+            <input type="text" id="f-nom" name="nom" autocomplete="name" maxlength="100" required>
+          </div>
+          <div class="field">
+            <label for="f-email">E-mail <span class="req">(obligatoire)</span></label>
+            <input type="email" id="f-email" name="email" autocomplete="email" maxlength="150" required>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="f-tel">Téléphone <span class="opt">(facultatif)</span></label>
+            <input type="tel" id="f-tel" name="telephone" autocomplete="tel" maxlength="30">
+          </div>
+          <div class="field">
+            <label for="f-creneau">Créneau souhaité <span class="opt">(facultatif)</span></label>
+            <input type="text" id="f-creneau" name="creneau_souhaite" maxlength="150" aria-describedby="f-creneau-aide">
+            <span class="field-help" id="f-creneau-aide">Par exemple : mardi en fin de journée</span>
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-message">Message <span class="req">(obligatoire)</span></label>
+          <textarea id="f-message" name="message" rows="5" maxlength="3000" required></textarea>
+        </div>
+        <div class="field field-check">
+          <input type="checkbox" id="f-consent" name="consentement" value="Oui" required>
+          <label for="f-consent">J'accepte que mes données soient utilisées uniquement pour répondre à ma demande. <a href="mentions-legales.html#confidentialite">Politique de confidentialité</a> <span class="req">(obligatoire)</span></label>
+        </div>
+
+        <button class="btn btn-gold btn-submit" type="submit">Envoyer</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
     </div>
   </div>
 </section>
@@ -162,7 +220,13 @@
         <li>8, rue Hondritz de Bas, 64600 Anglet</li>
       </ul>
     </address>
-    <p class="footer-legal"><a href="mentions-legales.html">Mentions légales</a></p>
+    <div class="footer-bottom">
+      <p class="footer-legal"><a href="mentions-legales.html">Mentions légales</a></p>
+      <ul class="social social-sm">
+        <li><a href="https://www.facebook.com/A_COMPLETER" target="_blank" rel="noopener"><svg viewBox="3 3 18 18" aria-hidden="true" focusable="false"><path d="M14.5 8.5H16V5.6c-.3 0-1.2-.1-2.3-.1-2.3 0-3.7 1.4-3.7 3.9v2.1H7.6v3.2H10V21h3.1v-6.3h2.5l.4-3.2h-2.9V9.7c0-.9.3-1.2 1.4-1.2z"/></svg><span class="visually-hidden">Facebook (nouvel onglet)</span></a></li>
+        <li><a href="https://www.instagram.com/A_COMPLETER" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3.9" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.1" cy="6.9" r="1.1"/></svg><span class="visually-hidden">Instagram (nouvel onglet)</span></a></li>
+      </ul>
+    </div>
   </div>
 </footer>
 

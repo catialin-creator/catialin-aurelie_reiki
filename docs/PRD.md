@@ -52,7 +52,7 @@ Parcours V1 – Poser une question ou demander un rendez-vous :
 ### F1 – Contenu et navigation
 | ID | Exigence | Critère d'acceptation |
 | --- | --- | --- |
-| F1.1 | En-tête : nom, accroche « Soin énergétique en Reiki », boutons « Me contacter » et « Appeler » | Boutons visibles sans défiler à 390 px |
+| F1.1 | En-tête : nom, accroche « Soin énergétique en Reiki », bouton « Me contacter » (le téléphone est dans la section contact et le pied de page) | Bouton visible sans défiler à 390 px |
 | F1.2 | Section « Qu'est-ce que le Reiki ? » : définition, Rei et Ki, repères historiques | Contenu repris du prototype |
 | F1.3 | Section « Déroulement d'une séance » en 4 étapes + conseils | 4 étapes en colonne sur mobile |
 | F1.4 | Avertissement : le Reiki ne remplace pas un avis ou un traitement médical | Sous la section séance et dans les mentions légales |
